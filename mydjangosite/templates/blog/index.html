@@ -1,0 +1,15 @@
+<html>
+  <head>
+    <title>Список статей</title>
+  </head>
+  <body>
+    <ul>
+	  {% for entry in entries %}
+	    <li>
+		  <i>{{ entry.date }}</i> -
+		  <a href='/blog/details/{{ entry.pk }}/'>{{ entry.title }}</a>
+		</li>
+	  {% endfor %}
+	</ul>
+  </body>
+</html>
